@@ -1,2 +1,1 @@
-# gcc_cafe-program-test
-## github에 올리는 중간코드
+# github에 올리는 공감정산코드
