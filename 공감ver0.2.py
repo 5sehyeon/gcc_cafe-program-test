@@ -74,6 +74,33 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
         else:
             dic1[re][3] = dic1[re][3] + (cup*3000)
             dic1[re][4] = dic1[re][4] + (cup*3000)
+            
+    def menu_def1(m):
+        money = (m*cup)
+        while money > 0:
+            if dic1[ta][4] > 0:
+                dic1[ta][4] = dic1[ta][4] - 100
+                dic1[ta][1] = dic1[ta][1] + 100
+                money = money - 100
+            elif dic1[ta][4] == 0:
+                dic1[ta][0] = dic1[ta][0] + 100
+                dic1[ta][1] = dic1[ta][1] + 100
+                money = money - 100
+        sum["매출"] = sum["매출"] + (m*cup)
+        
+    def menu_def2(m):
+        money = (m*int(i[l+1][0]))
+        while money > 0:
+            if dic1[ta][4] > 0:
+                dic1[ta][4] = dic1[ta][4] - 100
+                dic1[ta][1] = dic1[ta][1] + 100
+                money = money - 100
+            elif dic1[ta][4] == 0:
+                dic1[ta][0] = dic1[ta][0] + 100
+                dic1[ta][1] = dic1[ta][1] + 100
+                money = money - 100
+        sum["매출"] = sum["매출"] + (m*int(i[l+1][0]))
+        
                     
                     
     # 본격적으로 파일을 읽고 처리하는 부분시작.  ta는 선물주는 사람, re는 선물받는 사람 cup은 잔 수
@@ -267,19 +294,97 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                 elif i[0][1] == "정":
                     ta = "정지"
             if menu[0] == "베":
-                money = (2500*cup)
-                while money > 0:
-                    if dic1[ta][4] > 0:
-                        dic1[ta][4] = dic1[ta][4] - 100
-                        dic1[ta][1] = dic1[ta][1] + 100
-                        money = money - 100
-                    elif dic1[ta][4] == 0:
-                        dic1[ta][0] = dic1[ta][0] + 100
-                        dic1[ta][1] = dic1[ta][1] + 100
-                        money = money - 100
-                sum["매출"] = sum["매출"] + (2500*cup)
+                menu_def1(4000)
+            elif menu[0] == "에":
+                memu_def1(2500)
+            elif menu[0:2] == "뜨아":
+                menu_def1(2500)
+            elif menu[0:2] == "따아":
+                menu_def1(2500)
+            elif menu[0:2] == "아아":
+                menu_def1(2500)
+            elif menu[0:2] == "아메":
+                menu_def1(2500)
+            elif menu[0:2] == "라떼":
+                menu_def1(3000)
+            elif menu[0:4] == "카페라떼":
+                menu_def1(3000)
+            elif menu[0:4] == "카푸치노":
+                menu_def1(3000)
+            elif menu[0:2] == "바닐":
+                menu_def1(3500)
+            elif menu[0:3] == "아바라":
+                menu_def1(3500)
+            elif menu[0:4] == "카페모카":
+                menu_def1(3500)
+            elif menu[0:2] == "더치":
+                menu_def1(3000)
+            elif menu[0:4] == "콜드브루":
+                menu_def1(3000)
+            elif menu[0:4] == "더치라떼":
+                menu_def1(3500)
+            elif menu[0:2] == "보리":
+                menu_def1(2500)
+            elif menu[0:3] == "탄산수":
+                menu_def1(500)
+            elif menu[0:2] == "우유":
+                menu_def1(2000)
+            elif menu[0:4] == "귀리우유":
+                menu_def1(2000)
+            elif menu[0:3] == "밀크티":
+                menu_def1(3000)
+            elif menu[0:4] == "딸기라떼":
+                menu_def1(3500)
+            elif menu[0:2] == "캐모":
+                menu_def1(2500)
+            elif menu[0:2] == "루이":
+                menu_def1(2500)
+            elif menu[0:2] == "보이":
+                menu_def1(2500)
+            elif menu[0:2] == "페퍼":
+                menu_def1(2500)
+            elif menu[0:3] == "레몬그":
+                menu_def1(2500)
+            elif menu[0:3] == "라벤더":
+                menu_def1(2500)
+            elif menu[0] == "차":
+                menu_def1(2500)
+            elif menu[0] == "티":
+                menu_def1(2500)
+            elif menu[0:5] == "아이스크림":
+                menu_def1(2500)
+            elif menu[0:2] == "맥주":
+                menu_def1(3000)
+            elif menu[0:2] == "무알":
+                menu_def1(3000)
+            elif menu[0:2] == "아바":
+                menu_def1(3500)
+            elif menu[0:2] == "아보":
+                menu_def1(3500)
+            elif menu[0:2] == "미숫":
+                menu_def1(3500)
+            elif menu[0:3] == "망고스":
+                menu_def1(4000)
+            elif menu[0:2] == "망바":
+                menu_def1(4000)
+            elif menu[0:3] == "망고바":
+                menu_def1(4000)
+            elif menu[0:2] == "아포":
+                menu_def1(4000)
+            elif menu[0:2] == "아인":
+                menu_def1(4000)
+            elif menu[0:3] == "슈페너":
+                menu_def1(4000)
+            elif menu[0:2] == "크림":
+                menu_def1(3000)
+            elif menu[0] == "브":
+                menu_def1(3000)
+            elif menu[0:2] == "포춘":
+                menu_def1(1000)
+            elif menu[0:2] == "포츈":
+                menu_def1(1000)      
             '''
-            메뉴 적기
+            섭드립(드립), 초코 넣기, 오트밀로 할 경우.
             '''
         
         # 3번 알고리즘(주문하는 경우)
@@ -305,20 +410,97 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                     for m in range(0, (len(i)-5), 2):
                         l = l + 2
                         if i[l][0] == "베":
-                            money = (2500*int(i[l+1][0]))
-                            while money > 0:
-                                if dic1[ta][4] > 0:
-                                    dic1[ta][4] = dic1[ta][4] - 100
-                                    dic1[ta][1] = dic1[ta][1] + 100
-                                    money = money - 100
-                                elif dic1[ta][4] == 0:
-                                    dic1[ta][0] = dic1[ta][0] + 100
-                                    dic1[ta][1] = dic1[ta][1] + 100
-                                    money = money - 100
-                            sum["매출"] = sum["매출"] + (2500*int(i[l+1][0]))
-                            '''
-                            메뉴적기
-                            '''
+                            menu_def2(4000)
+                        elif i[l][0] == "에":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "뜨아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "따아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "아아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "아메":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "라떼":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "카페라떼":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "카푸치노":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "바닐":
+                            menu_def2(3500)
+                        elif i[l][0:3] == "아바라":
+                            menu_def2(3500)
+                        elif i[l][0:4] == "카페모카":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "더치":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "콜드브루":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "더치라떼":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "보리":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "탄산수":
+                            menu_def2(500)
+                        elif i[l][0:2] == "우유":
+                            menu_def2(2000)
+                        elif i[l][0:4] == "귀리우유":
+                            menu_def2(2000)
+                        elif i[l][0:3] == "밀크티":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "딸기라떼":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "캐모":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "루이":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "보이":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "페퍼":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "레몬그":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "라벤더":
+                            menu_def2(2500)
+                        elif i[l][0] == "차":
+                            menu_def2(2500)
+                        elif i[l][0] == "티":
+                            menu_def2(2500)
+                        elif i[l][0:5] == "아이스크림":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "맥주":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "무알":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "아바":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "아보":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "미숫":
+                            menu_def2(3500)
+                        elif i[l][0:3] == "망고스":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "망바":
+                            menu_def2(4000)
+                        elif i[l][0:3] == "망고바":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "아포":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "아인":
+                            menu_def2(4000)
+                        elif i[l][0:3] == "슈페너":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "크림":
+                            menu_def2(3000)
+                        elif i[l][0] == "브":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "포춘":
+                            menu_def2(1000)
+                        elif i[l][0:2] == "포츈":
+                            menu_def2(1000)
+                        # 섭드립(드립), 초코, 오트밀 경우 추가
+                        
                
                             
                 # 본인이름으로 먹을떄(3-2)
@@ -364,26 +546,103 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                             ta = "안지"
                         elif i[0][1] == "정":
                             ta = "정지"
-                    
-                    
                     l = 1
                     for m in range(0, (len(i)-3), 2):
                         l = l + 2
                         if i[l][0] == "베":
-                            money = (2500*int(i[l+1][0]))
-                            while money > 0:
-                                if dic1[ta][4] > 0:
-                                    dic1[ta][4] = dic1[ta][4] - 100
-                                    dic1[ta][1] = dic1[ta][1] + 100
-                                    money = money - 100
-                                elif dic1[ta][4] == 0:
-                                    dic1[ta][0] = dic1[ta][0] + 100
-                                    dic1[ta][1] = dic1[ta][1] + 100
-                                    money = money - 100
-                            sum["매출"] = sum["매출"] + (2500*int(i[l+1][0]))
-                            '''
-                            메뉴적기
-                            '''
+                            menu_def2(4000)
+                        elif i[l][0] == "에":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "뜨아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "따아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "아아":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "아메":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "라떼":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "카페라떼":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "카푸치노":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "바닐":
+                            menu_def2(3500)
+                        elif i[l][0:3] == "아바라":
+                            menu_def2(3500)
+                        elif i[l][0:4] == "카페모카":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "더치":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "콜드브루":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "더치라떼":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "보리":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "탄산수":
+                            menu_def2(500)
+                        elif i[l][0:2] == "우유":
+                            menu_def2(2000)
+                        elif i[l][0:4] == "귀리우유":
+                            menu_def2(2000)
+                        elif i[l][0:3] == "밀크티":
+                            menu_def2(3000)
+                        elif i[l][0:4] == "딸기라떼":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "캐모":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "루이":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "보이":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "페퍼":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "레몬그":
+                            menu_def2(2500)
+                        elif i[l][0:3] == "라벤더":
+                            menu_def2(2500)
+                        elif i[l][0] == "차":
+                            menu_def2(2500)
+                        elif i[l][0] == "티":
+                            menu_def2(2500)
+                        elif i[l][0:5] == "아이스크림":
+                            menu_def2(2500)
+                        elif i[l][0:2] == "맥주":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "무알":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "아바":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "아보":
+                            menu_def2(3500)
+                        elif i[l][0:2] == "미숫":
+                            menu_def2(3500)
+                        elif i[l][0:3] == "망고스":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "망바":
+                            menu_def2(4000)
+                        elif i[l][0:3] == "망고바":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "아포":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "아인":
+                            menu_def2(4000)
+                        elif i[l][0:3] == "슈페너":
+                            menu_def2(4000)
+                        elif i[l][0:2] == "크림":
+                            menu_def2(3000)
+                        elif i[l][0] == "브":
+                            menu_def2(3000)
+                        elif i[l][0:2] == "포춘":
+                            menu_def2(1000)
+                        elif i[l][0:2] == "포츈":
+                            menu_def2(1000)
+                        # 섭드립(드립), 초코, 오트밀 경우 추가
+                        
+                            
+                            
                     
                     
                                 
@@ -457,7 +716,7 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
     
     
     # 표를 보여준다.
-    df = pd.DataFrame(c, columns=["이름", "내야할", "먹은", "선물한", "선물받은",  "남은"]) # e{at)는 먹은금액, g(vie)는 준선물, r(ecieve)은 받은선물, s(sum)는 정산결과
+    df = pd.DataFrame(c, columns=["이름", "내야할", "먹은금액", "선물한", "선물받은",  "남은선물"]) # e{at)는 먹은금액, g(vie)는 준선물, r(ecieve)은 받은선물, s(sum)는 정산결과
     print(df)
     
     # 2달을 한달(상), 한달(하)로 짤라서 서로 다른 공감.csv파일로 넣어둔다. 그다음 2달이 지난 후 최종 정산때 (상),(하) 파일을 합쳐서(폴라리오오피스로 행값을 모두 합치는 법 배우기.) 지연이모에게 최종본을 준다.
