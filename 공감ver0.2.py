@@ -46,11 +46,11 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
         money = (cup*3000)
         while money > 0:
             if dic1[ta][4] > 0:
-                dic1[ta][4] = dic1[ta][4] - 500
-                money = money - 500
+                dic1[ta][4] = dic1[ta][4] - 100
+                money = money - 100
             elif dic1[ta][4] == 0:
-                dic1[ta][0] = dic1[ta][0] + 500
-                money = money - 500
+                dic1[ta][0] = dic1[ta][0] + 100
+                money = money - 100
         sum["매출"] = sum["매출"] + (cup*3000)
         if (re == "하루") and (i[len(i)-num][2] == "나"):
             dic1["하루나"][3] = dic1["하루나"][3] + (cup*3000)
@@ -132,11 +132,11 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                 money = (3000*cup*len(lst))
                 while money > 0:
                     if dic1[ta][4] > 0:
-                        dic1[ta][4] = dic1[ta][4] - 500
-                        money = money - 500
+                        dic1[ta][4] = dic1[ta][4] - 100
+                        money = money - 100
                     elif dic1[ta][4] == 0:
-                        dic1[ta][0] = dic1[ta][0] + 500
-                        money = money - 500
+                        dic1[ta][0] = dic1[ta][0] + 100
+                        money = money - 100
                 sum["매출"] = sum["매출"] + (3000*cup*len(lst))
                 for h in lst:
                     dic1[h][3] = dic1[h][3] + (3000*cup)
@@ -270,13 +270,13 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                 money = (2500*cup)
                 while money > 0:
                     if dic1[ta][4] > 0:
-                        dic1[ta][4] = dic1[ta][4] - 500
-                        dic1[ta][1] = dic1[ta][1] + 500
-                        money = money - 500
+                        dic1[ta][4] = dic1[ta][4] - 100
+                        dic1[ta][1] = dic1[ta][1] + 100
+                        money = money - 100
                     elif dic1[ta][4] == 0:
-                        dic1[ta][0] = dic1[ta][0] + 500
-                        dic1[ta][1] = dic1[ta][1] + 500
-                        money = money - 500
+                        dic1[ta][0] = dic1[ta][0] + 100
+                        dic1[ta][1] = dic1[ta][1] + 100
+                        money = money - 100
                 sum["매출"] = sum["매출"] + (2500*cup)
             '''
             메뉴 적기
@@ -308,13 +308,13 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                             money = (2500*int(i[l+1][0]))
                             while money > 0:
                                 if dic1[ta][4] > 0:
-                                    dic1[ta][4] = dic1[ta][4] - 500
-                                    dic1[ta][1] = dic1[ta][1] + 500
-                                    money = money - 500
+                                    dic1[ta][4] = dic1[ta][4] - 100
+                                    dic1[ta][1] = dic1[ta][1] + 100
+                                    money = money - 100
                                 elif dic1[ta][4] == 0:
-                                    dic1[ta][0] = dic1[ta][0] + 500
-                                    dic1[ta][1] = dic1[ta][1] + 500
-                                    money = money - 500
+                                    dic1[ta][0] = dic1[ta][0] + 100
+                                    dic1[ta][1] = dic1[ta][1] + 100
+                                    money = money - 100
                             sum["매출"] = sum["매출"] + (2500*int(i[l+1][0]))
                             '''
                             메뉴적기
@@ -373,13 +373,13 @@ with open("C:/Users/오세현/Desktop/버전1시험 최종 카톡내용.txt", "r
                             money = (2500*int(i[l+1][0]))
                             while money > 0:
                                 if dic1[ta][4] > 0:
-                                    dic1[ta][4] = dic1[ta][4] - 500
-                                    dic1[ta][1] = dic1[ta][1] + 500
-                                    money = money - 500
+                                    dic1[ta][4] = dic1[ta][4] - 100
+                                    dic1[ta][1] = dic1[ta][1] + 100
+                                    money = money - 100
                                 elif dic1[ta][4] == 0:
-                                    dic1[ta][0] = dic1[ta][0] + 500
-                                    dic1[ta][1] = dic1[ta][1] + 500
-                                    money = money - 500
+                                    dic1[ta][0] = dic1[ta][0] + 100
+                                    dic1[ta][1] = dic1[ta][1] + 100
+                                    money = money - 100
                             sum["매출"] = sum["매출"] + (2500*int(i[l+1][0]))
                             '''
                             메뉴적기
